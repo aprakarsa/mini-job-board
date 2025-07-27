@@ -142,20 +142,38 @@ Only the authenticated user who created the job post is allowed to edit and dele
 
 ---
 
-## 📌 What to do to improve?
+## 📌 FFuture Enhancements and Optimizations with Extended Time
 
-✅ Add pagination or infinite scroll on the job list
+1. Add full-text search and keyword filtering
+   Enable users to search jobs by title, company name, or description using Supabase’s full-text search or a search service like Algolia.
 
-✅ Implement search by keyword (title or company)
+2. Improve form validation and error handling
+   Use react-hook-form or zod for better validation UX and more reliable client-side + server-side input checking.
 
-✅ Add support for image/logo uploads per job post
+3. Implement pagination or infinite scroll
+   Prevent performance issues by loading jobs in batches rather than all at once.
 
-✅ Improve UX for form validation and error messages
+4. Add profile pages and job ownership indicators
+   Let users manage their profile and visually identify which jobs they created on the dashboard.
 
-✅ Add unit tests for server actions and components
+5. Job expiration or status (open/closed)
+   Allow users to mark jobs as filled or expired, improving the reliability of listings.
 
-✅ Add admin role support with analytics dashboard
+6. Add image/logo upload for companies
+   Store image assets in Supabase Storage and display them in job cards or detail pages.
 
-✅ Edit to server action on the edit Job
+7. Improve mobile responsiveness and accessibility
+   Refine layout and ARIA support to ensure usability across devices and assistive technologies.
+
+8. Write tests (unit/integration)
+   Add automated tests using Jest and React Testing Library to ensure code quality and prevent regressions.
+
+9. Add internationalization (i18n)
+   Make the job board usable for users in multiple languages and regions.
+
+10. Edit to server action on the edit Job
+    Move the update logic into a server action (similar to the Add Job flow) for better security, consistency, and separation of concerns.
+
+11. And many more..
 
 ---
