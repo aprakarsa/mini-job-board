@@ -19,7 +19,7 @@ export default function EditJobPage() {
     useEffect(() => {
         const fetchJob = async () => {
             const res = await fetch(
-                `http://localhost:3000/api/jobs/${params.id}`
+                `https://mini-job-board-rosy-eight.vercel.app/api/jobs/${params.id}`
             );
             const data = await res.json();
             if (data && !data.error) {
@@ -51,11 +51,14 @@ export default function EditJobPage() {
 
         const id = Number(params.id);
 
-        const res = await fetch(`http://localhost:3000/api/jobs/${id}`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(updatedJob),
-        });
+        const res = await fetch(
+            `https://mini-job-board-rosy-eight.vercel.app/api/jobs/${id}`,
+            {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updatedJob),
+            }
+        );
 
         const json = await res.json();
 
