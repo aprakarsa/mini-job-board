@@ -142,7 +142,7 @@ Only the authenticated user who created the job post is allowed to edit and dele
 
 ---
 
-## 📌 FFuture Enhancements and Optimizations with Extended Time
+## 📌 Future Enhancements and Optimizations with Extended Time
 
 1. Add full-text search and keyword filtering
    Enable users to search jobs by title, company name, or description using Supabase’s full-text search or a search service like Algolia.
