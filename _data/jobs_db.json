@@ -1,0 +1,60 @@
+{
+    "jobs": [
+        {
+            "id": "1",
+            "title": "Frontend Developer",
+            "company_name": "TechNova",
+            "description": "Build and maintain modern web interfaces using React and Tailwind CSS.",
+            "location": "Remote",
+            "job-type": "full"
+        },
+        {
+            "id": "2",
+            "title": "Backend Engineer",
+            "company_name": "CloudCore",
+            "description": "Design APIs and manage server infrastructure using Node.js and PostgreSQL.",
+            "location": "Singapore",
+            "job-type": "full"
+        },
+        {
+            "id": "3",
+            "title": "UI/UX Designer",
+            "company_name": "Bright Labs",
+            "description": "Create intuitive user experiences and design high-fidelity prototypes.",
+            "location": "Jakarta",
+            "job-type": "part"
+        },
+        {
+            "id": "4",
+            "title": "Mobile App Developer",
+            "company_name": "Appify",
+            "description": "Develop cross-platform mobile apps using React Native.",
+            "location": "Bali",
+            "job-type": "contract"
+        },
+        {
+            "id": "5",
+            "title": "DevOps Engineer",
+            "company_name": "SafeNet",
+            "description": "Automate deployment pipelines and monitor cloud infrastructure.",
+            "location": "Remote",
+            "job-type": "part"
+        },
+        {
+            "id": "fad1",
+            "title": "QA Engineer",
+            "company_name": "Slash Digital",
+            "description": "Handy Dandy QA engineer to assure product delivery is zero errors.",
+            "location": "remote",
+            "job-type": "part"
+        },
+        {
+            "id": "5eb3",
+            "title": "CTO",
+            "company_name": "Tetrixx",
+            "description": "Need new CTO ASAP, will pay a month a head.",
+            "location": "hybrid",
+            "job-type": "part"
+        }
+    ]
+}
