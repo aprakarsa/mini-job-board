@@ -171,9 +171,6 @@ Only the authenticated user who created the job post is allowed to edit and dele
 9. Add internationalization (i18n)
    Make the job board usable for users in multiple languages and regions.
 
-10. Edit to server action on the edit Job
-    Move the update logic into a server action (similar to the Add Job flow) for better security, consistency, and separation of concerns.
-
-11. And many more..
+10. And many more..
 
 ---

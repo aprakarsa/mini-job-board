@@ -1,6 +1,9 @@
 "use server";
 
-import { createServerActionClient } from "@supabase/auth-helpers-nextjs";
+import {
+    createServerActionClient,
+    createServerComponentClient,
+} from "@supabase/auth-helpers-nextjs";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
@@ -40,4 +43,42 @@ export async function deleteJob(id) {
 
     revalidatePath("/jobs");
     redirect("/jobs");
+}
+
+export async function editJob(formData) {
+    const supabase = createServerActionClient({ cookies });
+    const job = Object.fromEntries(formData);
+    const id = job.id;
+
+    const {
+        data: { session },
+    } = await supabase.auth.getSession();
+
+    const { error } = await supabase
+        .from("jobs")
+        .update({
+            title: job.title,
+            company_name: job.company_name,
+            description: job.description,
+            location: job.location,
+            job_type: job.job_type,
+        })
+        .eq("id", id)
+        .eq("user_email", session.user.email);
+
+    if (error) {
+        throw new Error("Problem! Could not update the job.");
+    }
+
+    revalidatePath("/jobs");
+    redirect("/jobs");
+}
+
+export async function getJob(id) {
+    const supabase = createServerComponentClient({ cookies });
+    const { data } = await supabase.from("jobs").select().eq("id", id).single();
+
+    if (!data) throw new Error("Job not found");
+
+    return data;
 }
